@@ -1,1 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  max-width: 1920px;
+}
+nav {
+  background-color: rgb(229, 230, 219);
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 5px 5px 0;
+}
 
+/* Login styling stuff */
+.login_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+form {
+  background-color: rgba(168, 165, 125, 0.596);
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  padding: 15px;
+  border-radius: 10px;
+  border: solid black 2px;
+}
+.mail_label {
+  position: relative;
+  left: -185px;
+  top: 0;
+}
+
+.password_label {
+  position: relative;
+  top: 0;
+  left: -185px;
+}
