@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap"); /* 
+font-family: 'Permanent Marker', cursive;
+font-family: 'Fuzzy Bubbles', cursive;
+*/
+
 * {
   padding: 0;
   margin: 0;
@@ -5,11 +10,49 @@
 body {
   max-width: 1920px;
 }
+header {
+  position: sticky;
+  top: 0;
+}
 nav {
   background-color: rgb(229, 230, 219);
   width: 100%;
-  height: 40px;
+  height: 50px;
   box-shadow: 0 5px 5px 0;
+}
+.nav {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.nav_item {
+  background-color: darkslategray;
+  border-radius: 10px;
+  width: 60px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.nav_item:last-child {
+  margin-left: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: 20px;
+  margin-right: 20px;
+}
+#logo {
+  width: 45px;
+  height: 45px;
+  margin-right: 5px;
 }
 
 /* Login styling stuff */
@@ -34,14 +77,42 @@ form {
   border-radius: 10px;
   border: solid black 2px;
 }
-.mail_label {
+
+label {
+  font-size: 20px;
+  transition: 0.5s;
+  pointer-events: none;
   position: relative;
-  left: -185px;
-  top: 0;
+  left: 15px;
+  top: -35px;
 }
 
-.password_label {
-  position: relative;
-  top: 0;
-  left: -185px;
+.password:focus ~ .label_container #password_label {
+  top: -75px;
+  left: 7px;
+}
+.email:focus ~ .label_container #mail_label {
+  top: -75px;
+  left: 7px;
+}
+
+.email:not(:placeholder-shown) ~ .label_container #mail_label {
+  top: -75px;
+  left: 7px;
+}
+.password:not(:placeholder-shown) ~ .label_container #password_label {
+  top: -75px;
+  left: 7px;
+}
+
+.login_button {
+  padding: 15px;
+  border-radius: 8px;
+  width: 80px;
+}
+
+.label_container {
+  width: 150px;
+  height: 0px;
+  position: absolute;
 }

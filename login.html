@@ -13,14 +13,26 @@
   </head>
 
   <body>
-    <header></header>
+    <header>
+      <nav>
+        <ul class="nav">
+          <li class="logo"><img id="logo" src="Logo.png" />MakersSpace.com</li>
+          <li class="nav_item">item</li>
+          <li class="nav_item">item</li>
+          <li class="nav_item">item</li>
+          <li class="nav_item">Login</li>
+        </ul>
+      </nav>
+    </header>
     <section class="login_container">
       <form>
         <div>
           <input type="email" class="login email" id="email" placeholder=" " />
-          <label for="id_email" class="mail_label"
-            ><i class="far fa-envelope"></i> Email</label
-          >
+          <div class="label_container">
+            <label for="id_email" id="mail_label"
+              ><i class="far fa-envelope"></i> Email</label
+            >
+          </div>
         </div>
         <div>
           <input
@@ -29,10 +41,13 @@
             id="password"
             placeholder=" "
           />
-          <label for="id_password" class="password_label"
-            ><i class="far fa-envelope"></i> Password</label
-          >
+          <div class="label_container">
+            <label for="id_password" id="password_label"
+              ><i class="fas fa-key"></i> Password</label
+            >
+          </div>
         </div>
+        <input type="submit" class="login_button" value="Log in" />
       </form>
     </section>
   </body>
