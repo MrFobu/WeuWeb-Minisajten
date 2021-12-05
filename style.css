@@ -10,6 +10,8 @@ font-family: 'Fuzzy Bubbles', cursive;
 body {
   max-width: 1920px;
 }
+
+/*Nav bar */
 header {
   position: sticky;
   top: 0;
@@ -25,21 +27,29 @@ nav {
   list-style: none;
   text-decoration: none;
   align-items: center;
-  justify-content: center;
   height: 100%;
+  width: 100%;
 }
-.nav_item {
+.nav_link {
   background-color: darkslategray;
   border-radius: 10px;
-  width: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 20px;
+
+  text-decoration: none;
+  color: white;
+  font-family: "Fuzzy Bubbles", cursive;
 }
-.nav_item:last-child {
+.push {
   margin-left: auto;
+}
+.current {
+  text-decoration: underline white 3px;
 }
 
 .logo {
@@ -76,6 +86,7 @@ form {
   padding: 15px;
   border-radius: 10px;
   border: solid black 2px;
+  margin-right: 40px;
 }
 
 label {
@@ -109,10 +120,42 @@ label {
   padding: 15px;
   border-radius: 8px;
   width: 80px;
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: 15px;
 }
 
 .label_container {
   width: 150px;
   height: 0px;
   position: absolute;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(201, 201, 201);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+
+.footer_item {
+  width: 150px;
+  color: rgb(117, 117, 117);
+}
+
+.terms {
+  font-size: 12px;
+}
+.info {
+  font-size: 12px;
+}
+
+.footer_brand {
+  font-size: 20px;
+  font-family: "Fuzzy Bubbles", cursive;
 }
