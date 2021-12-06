@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://kit.fontawesome.com/1047771e70.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -32,15 +36,14 @@
       </div>
     </hero>
     <section class="Introduction">
-      <div class="slideshow_container">
+      <div class="slideshow_introduction">
         <div class="introduction_container">
           <h2>Welcome to MakerSpace!</h2>
           <p class="introduction_content">
             Are you a cosplayer? Or maybe you just like crafting? Either way
             this is the website for you! Here at Maker Space we specialise in
             providing cheap materials with world-wide shipping, as well as
-            guides for everyone weather or not you are a beginner or a skilled
-            maker!
+            guides for everyone weather you are a beginner or a skilled maker!
           </p>
           <p class="introduction_content">
             All of our guides are submitted by the community and we are always
@@ -49,9 +52,87 @@
             more!
           </p>
         </div>
-        <div class="slideshow_images"></div>
+
+        <div class="slideshow_container">
+          <div class="slide">
+            <div class="slide_number">1/4</div>
+            <img src="Images/Sewing.jpg" class="slide_image" />
+          </div>
+
+          <div class="slide">
+            <div class="slide_number">2/4</div>
+            <img src="Images/Cosplayer-ciri.jpg" class="slide_image" />
+            <div class="slide_caption">The Witcher 3 - Ciri</div>
+          </div>
+
+          <div class="slide">
+            <div class="slide_number">3/4</div>
+            <img src="Images/Sewing.jpg" class="slide_image" />
+            <div class="slide_caption">Caption</div>
+          </div>
+
+          <div class="slide">
+            <div class="slide_number">4/4</div>
+            <img src="Images/Sewing.jpg" class="slide_image" />
+            <div class="slide_caption">Caption</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)"
+            ><i class="fas fa-chevron-left"></i>
+          </a>
+          <a class="next" onclick="plusSlides(1)"
+            ><i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+
+        <script>
+          //Till stor del kopierat script, har inte full förståelse för det*
+          var slideIndex = 1;
+          show(slideIndex);
+          function plusSlides(n) {
+            show((slideIndex += n));
+          }
+          function currentSlide(n) {
+            show((slideIndex = n));
+          }
+          function show(n) {
+            //Function som bestämmer vilken slide ska visas
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            //If koder som kållar om indexen blir för hög, och korigerar det
+            if (n > slides.length) {
+              slideIndex = 1;
+            }
+            if (n < 1) {
+              slideIndex = slides.length;
+            }
+            //for loop som jag är ganska säker på att det är det som håller koden aktiv.
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block"; //Ändrar stylen på objektet som ska visas
+          }
+        </script>
       </div>
     </section>
+
+    <footer>
+      <div class="footer_item terms">
+        <p>
+          By using our website you are agreeing to our
+          <a href="#">Terms of service</a>
+        </p>
+      </div>
+      <div class="footer_brand">MakerSpace.Com</div>
+      <div class="footer_item info">
+        <ul>
+          <li>Submit guides!</li>
+          <li>Report Issue</li>
+          <li>About us</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </footer>
     <section class="guides"></section>
   </body>
 </html>
