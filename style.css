@@ -216,6 +216,7 @@ h2 {
 }
 
 /*slide show styling */
+
 .slideshow_container {
   margin: 20px;
   width: 400px;
@@ -260,4 +261,16 @@ h2 {
   transform: translate(-50%);
   font-family: "Fuzzy Bubbles", cursive;
   color: rgb(219, 218, 208);
+}
+
+.preview_section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.preview_container {
+  width: 85%;
+  height: 200px;
+  margin: 20px;
+  background-color: rgb(218, 214, 187);
 }
