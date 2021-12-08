@@ -9,7 +9,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MakerSpace</title>
+    <link rel="icon" href="Images/Logo.png" />
   </head>
 
   <body>
@@ -17,11 +18,13 @@
       <nav>
         <ul class="nav">
           <li class="logo">
-            <img
-              id="logo"
-              src="Images/Logo.png"
-              alt="Company Logo"
-            />MakerSpace.com
+            <a href="Index.html" class="logo_link">
+              <img
+                id="logo"
+                src="Images/Logo.png"
+                alt="Company Logo"
+              />MakerSpace.com
+            </a>
           </li>
           <li><a class="nav_link current" href="Index.html">Home</a></li>
           <li><a class="nav_link" href="store.html">Materials</a></li>
@@ -116,12 +119,24 @@
       </div>
     </section>
 
-    <section class="preview_section">
-      <div class="preview_container">
-        <div class="guide_preview"></div>
-        <div class="guide_preview"></div>
-        <div class="guide_preview"></div>
-        <div class="guide_preview"></div>
+    <section class="guides">
+      <div class="guide_container">
+        <div class="preview">
+          <img class="thumbnail" src="Images/FillerImage_Square.PNG" />
+          <div class="preview_text">Lorem ipsum</div>
+        </div>
+        <div class="preview">
+          <img class="thumbnail" src="Images/FillerImage_Square.PNG" />
+          <div class="preview_text">Lorem ipsum</div>
+        </div>
+        <div class="preview">
+          <img class="thumbnail" src="Images/FillerImage_Square.PNG" />
+          <div class="preview_text">Lorem ipsum</div>
+        </div>
+        <div class="preview">
+          <img class="thumbnail" src="Images/FillerImage_Square.PNG" />
+          <div class="preview_text">Lorem ipsum</div>
+        </div>
       </div>
     </section>
 
@@ -142,6 +157,5 @@
         </ul>
       </div>
     </footer>
-    <section class="guides"></section>
   </body>
 </html>
