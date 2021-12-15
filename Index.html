@@ -90,7 +90,6 @@
         </div>
 
         <script>
-          //Till stor del kopierat script, har inte full förståelse för det*
           var slideIndex = 1;
           show(slideIndex);
           function plusSlides(n) {
@@ -100,10 +99,8 @@
             show((slideIndex = n));
           }
           function show(n) {
-            //Function som bestämmer vilken slide ska visas
             var i;
             var slides = document.getElementsByClassName("slide");
-            //If koder som kållar om indexen blir för hög, och korigerar det
             if (n > slides.length) {
               slideIndex = 1;
             }
@@ -113,7 +110,7 @@
             for (i = 0; i < slides.length; i++) {
               slides[i].style.display = "none";
             }
-            slides[slideIndex - 1].style.display = "block"; //Ändrar stylen på objektet som ska visas
+            slides[slideIndex - 1].style.display = "block";
           }
         </script>
       </div>
