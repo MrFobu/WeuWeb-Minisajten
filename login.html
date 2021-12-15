@@ -39,7 +39,10 @@
       <form>
         <div>
           <input type="email" class="login email" id="email" placeholder=" " />
+          <!--The empety placeholder is there to allow the css rule :not(:placeholder-shown) to function-->
           <div class="label_container">
+            <!--The label container makes sure the container takes up no space
+            on the page, while still allowing the label to have a "relative" position-->
             <label for="id_email" id="mail_label"
               ><i class="far fa-envelope"></i> Email</label
             >
