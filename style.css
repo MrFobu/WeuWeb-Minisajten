@@ -291,8 +291,7 @@ h2 {
 }
 
 .preview {
-  height: 250px;
-  width: 200px;
+  width: 20%;
   background-color: rgb(230, 231, 224);
   border: 4px solid rgb(173, 173, 173);
   display: flex;
@@ -301,15 +300,22 @@ h2 {
   margin: 20px;
   transition: 0.5s;
 }
+.preview:hover {
+  width: 22%;
+  margin: 0px;
+}
+
 .thumbnail {
   width: 90%;
   margin: 10px;
 }
 
 .preview:hover {
-  height: 265px;
-  width: 215px;
+  width: 22%;
   margin: 0px;
+}
+.preview_text {
+  margin-bottom: 20px;
 }
 
 /* Store */
@@ -375,6 +381,16 @@ h3 {
   font-family: "Fuzzy Bubbles", cursive;
 }
 
+@media only screen and (max-width: 1130px) {
+  .preview {
+    width: 40%;
+  }
+  .preview:hover {
+    width: 42%;
+    margin: 0;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .nav {
     flex-direction: column;
@@ -407,7 +423,15 @@ h3 {
     padding: 5px;
     width: 195px;
   }
+  .preview {
+    width: 80%;
+  }
+  .preview:hover {
+    width: 82%;
+    margin: 0;
+  }
 }
+
 @media only screen and (min-width: 600px) {
   .push {
     margin-left: auto;
