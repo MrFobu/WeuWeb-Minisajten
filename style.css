@@ -7,12 +7,18 @@ body {
   max-width: 1920px;
   margin-right: auto;
   margin-left: auto;
-  background-color: rgb(187, 167, 124);
+  background-color: var(--secondary_color);
 }
 .login_body {
   background-image: url("Images/Crafting.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+:root {
+  --primary_color: rgb(218, 214, 187);
+  --secondary_color: rgb(187, 167, 124);
+  --primary_font: "Fuzzy Bubbles", cursive;
 }
 
 /* Table of le conent: 
@@ -31,7 +37,7 @@ header {
   top: 0;
 }
 nav {
-  background-color: rgb(218, 214, 187);
+  background-color: var(--primary_color);
   width: 100%;
   height: 50px;
   box-shadow: 0 5px 5px 0;
@@ -57,7 +63,7 @@ nav {
 
   text-decoration: none;
   color: white;
-  font-family: "Fuzzy Bubbles", cursive;
+  font-family: var(--primary_font);
 }
 
 .current {
@@ -73,7 +79,7 @@ nav {
   text-decoration: none;
   display: flex;
   align-items: center;
-  font-family: "Fuzzy Bubbles", cursive;
+  font-family: var(--primary_font);
   font-size: 20px;
   margin-right: 20px;
   color: black;
@@ -136,7 +142,7 @@ text field is focused, and 2: The label stays up if the field contains text*/
   padding: 15px;
   border-radius: 8px;
   width: 80px;
-  font-family: "Fuzzy Bubbles", cursive;
+  font-family: var(--primary_font);
   font-size: 15px;
 }
 
@@ -172,7 +178,7 @@ footer {
 
 .footer_brand {
   font-size: 20px;
-  font-family: "Fuzzy Bubbles", cursive;
+  font-family: var(--primary_font);
 }
 
 /* Home page */
@@ -190,7 +196,7 @@ footer {
   width: 300px;
 }
 h1 {
-  font-family: "Fuzzy Bubbles", cursive;
+  font-family: var(--primary_font);
   color: rgb(243, 240, 219);
   font-size: 50px;
 }
@@ -208,7 +214,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin: 40px;
-  background-color: rgb(218, 214, 187);
+  background-color: var(--primary_color);
 }
 
 h2 {
@@ -239,7 +245,7 @@ h2 {
 }
 .slide_number {
   font-size: 14px;
-  font-family: "Fuzzy Bubbles", cursive;
+  font-family: var(--primary_font);
   position: absolute;
   top: 0px;
   margin: 5px;
@@ -271,7 +277,7 @@ h2 {
   bottom: 10px;
   left: 50%;
   transform: translate(-50%);
-  font-family: "Fuzzy Bubbles", cursive;
+  font-family: var(--primary_font);
   color: rgb(219, 218, 208);
 }
 
@@ -283,26 +289,27 @@ h2 {
 .guide_container {
   width: 85%;
   margin: 20px;
-  background-color: rgb(218, 214, 187);
+  background-color: var(--primary_color);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .preview {
-  width: 20%;
-  background-color: rgb(230, 231, 224);
-  border: 4px solid rgb(173, 173, 173);
+  max-width: 20%;
+  background-color: rgb(255, 255, 255);
+  border: 4px solid var(--secondary_color);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
   transition: 0.5s;
 }
-.preview:hover {
-  width: 22%;
-  margin: 0px;
+@media only screen and (min-width: 750px) {
+  .preview:hover {
+    padding: 5px;
+  }
 }
 
 .thumbnail {
@@ -310,10 +317,6 @@ h2 {
   margin: 10px;
 }
 
-.preview:hover {
-  width: 22%;
-  margin: 0px;
-}
 .preview_text {
   margin-bottom: 20px;
 }
@@ -331,7 +334,7 @@ h2 {
   max-width: 250px;
   margin: 10px;
   background-color: white;
-  border: 4px solid rgb(218, 214, 187);
+  border: 4px solid var(--primary_color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -366,44 +369,51 @@ h3 {
   padding: 10px;
   border-radius: 20px;
   text-decoration: none;
-  font-family: "Fuzzy Bubbles", cursive;
+  font-family: var(--primary_font);
   color: white;
   margin-bottom: 10px;
 }
 
 .price {
-  font-family: "Fuzzy Bubbles", cursive;
+  font-family: var(--primary_font);
   color: rgb(12, 209, 22);
   margin-bottom: 10px;
 }
 
 h3 {
-  font-family: "Fuzzy Bubbles", cursive;
+  font-family: var(--primary_font);
 }
 
-@media only screen and (max-width: 1130px) {
-  .preview {
-    width: 40%;
+@media only screen and (max-width: 750px) {
+  .guide_container {
+    flex-wrap: wrap;
   }
-  .preview:hover {
-    width: 42%;
-    margin: 0;
+  .preview {
+    max-width: 40%;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .nav {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .nav_link {
     margin-top: 10px;
+    margin-bottom: 5px;
   }
   nav {
     height: auto;
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
   .hero_logo {
     width: 250px;
@@ -419,10 +429,7 @@ h3 {
     margin-top: -15px;
     margin-left: 15px;
   }
-  .login_button {
-    padding: 5px;
-    width: 195px;
-  }
+
   .preview {
     width: 80%;
   }
@@ -430,8 +437,15 @@ h3 {
     width: 82%;
     margin: 0;
   }
+  .preview {
+    max-width: 90%;
+  }
 }
-
+@media only screen and (max-width: 380px) {
+  .home {
+    display: none;
+  }
+}
 @media only screen and (min-width: 600px) {
   .push {
     margin-left: auto;
